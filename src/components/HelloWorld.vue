@@ -51,9 +51,6 @@
         </figure>
     </router-link>
 		
-			
-			
-			
    </footer>
   </div>
 </template>
