@@ -15,9 +15,15 @@ import Gouwuche from '@/components/shangcheng/Gouwuche'
 //租房子
 import Host from '@/components/fangdong/Host'
 import Hezu from '@/components/fangdong/Hezu'
+//我的
 
+import Set from '@/components/wo/Set'
+import Tuichu from '@/components/wo/Tuichu'
+import Suggest from '@/components/wo/Suggest'
+import Adivce from '@/components/wo/Adivce'
 Vue.use(Router)
-
+//地图
+import Map from '@/components/map/Map'
 export default new Router({
   routes: [
     {
@@ -75,5 +81,30 @@ export default new Router({
       path: '/gouwuche',
       component: Gouwuche
     },
+    //wo路由规则
+    {
+      path: '/set',
+      component: Set
+    },
+    {
+      path: '/adivce',
+      component: Adivce
+    },
+    {
+      path: '/suggest',
+      component: Suggest
+    },
+    {
+      path: '/tuichu',
+      component: Tuichu
+    },
+    {
+      path: '/map',
+      component: Map
+    },
+
+
+
+
   ]
 })

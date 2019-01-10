@@ -28,76 +28,7 @@
 
 
 
-                <!-- <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>收纳整理</figcaption>
-                </figure>
-                </router-link>
-
-
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>卫浴个护</figcaption>
-                </figure>
-                </router-link>
-
-
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>餐厨用品</figcaption>
-                </figure>
-                </router-link>
-
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>生活数码</figcaption>
-                </figure>
-                </router-link>
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>居家装饰</figcaption>
-                </figure>
-                </router-link>
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>设计师</figcaption>
-                </figure>
-                </router-link>
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>家具</figcaption>
-                </figure>
-                </router-link>
-
-
-                <router-link to='/detail' tag='span'>
-                <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>户外出行</figcaption>
-                </figure>
-                </router-link>
-
-
-                <router-link to='/detail' tag='span'>
-                 <figure>
-                    <img src="static/254985.jpg" height=30 width=30 />
-                    <figcaption>饮食</figcaption>
-                </figure>
-                </router-link> -->
-
+               
             </div>
             <!-- 中间的部分 -->
             <div class="main-center">
