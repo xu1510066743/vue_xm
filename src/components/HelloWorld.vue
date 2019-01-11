@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-   <header>
+   <header style="background:#fff;">
      <div class="foot_l">
          <span>北京</span>
          <span class="iconfont icon-xiangxia" style="margin-left:8px"></span>
@@ -16,9 +16,14 @@
       </div>
       
    </header>
+
+
+   
    <section>
      <router-view></router-view>
    </section>
+
+
    <footer>
      <router-link to='/shouye' tag='p'>
         <figure>
@@ -63,7 +68,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+        
     }
   }
 }
@@ -84,10 +89,11 @@ section{
   flex: 1;overflow: auto;
 
 }
-footer,header{
+footer{
   height: 60px;background: #ccc;
   
 }
+header{height: 60px;}
 
 footer{display: flex;justify-content: space-around;align-items: center;}
 footer figure{display: flex;flex-direction: column;align-items: center;}
@@ -95,9 +101,9 @@ footer figure span{font-size: 20px;}
 footer figure figcaption{font-size: 14px;}
 
 header{display: flex;justify-content: space-around;align-items: center}
-.foot_l{width: 65px;height: 30px;line-height: 30px;}
+.foot_l{width: 65px;height: 30px;line-height: 30px;display: flex;}
 .foot_c{width: 230px;height: 27px;position: relative;}
-.foot_c input{width: 230px;height: 27px;border: none;background: #FFF2F2F2;}
+.foot_c input{width: 220px;height: 27px;border: none;background: #ccc;padding-left: 10px}
 .foot_r{width: 24px;height: 24px;}
 .foot_r span{font-size: 24px;}
 </style>
