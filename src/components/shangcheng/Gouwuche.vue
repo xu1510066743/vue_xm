@@ -1,5 +1,5 @@
 <template>
-    <div class="mark">
+    <div class="marker">
         <header>
             <em class="iconfont icon-left" style="width:30px;color:#0076FF" @click="fanhui()">&nbsp;Back</em>
             <span>{{tit}}</span>
@@ -48,10 +48,15 @@
         </ul>
 </section>
         <div class="warper1">
-            <input type="checkbox" class="you"/>
+            <div>
+            <input type="checkbox" class="you" value=""/>
+            <span>全选</span>
+            </div>
             <div class='con'>
             <h5>总计：</h5>
+            <router-link to="/order" tag='span'>
             <button class="btn btn-info jiesun">去结算</button>
+            </router-link>
             </div>
 
 
@@ -88,15 +93,13 @@
 
 <script>
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import axios from 'axios';
 
 export default {
   name:"Gouwuche",
   data(){
       return{
           tit:'购物车',
-          
-    
       }
   },
   methods:{
@@ -106,6 +109,7 @@ export default {
   },
    mounted(){
       //this.$emit('toparent',this.tit)
+
   }
 }
 </script>
@@ -120,7 +124,7 @@ export default {
 
 
 <style scoped>
-.mark{height: 100vh;display: flex;flex-direction: column;}
+.marker{height: 100vh;display: flex;flex-direction: column;}
 
 
 *{margin: 0;padding: 0;} 
@@ -141,7 +145,7 @@ footer figure{display: flex;flex-direction: column;align-items: center;}
 img{display: block;border: none;width:80px;height: 80px;}
 h3{font-size: 12px;width: 256px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 input[type="checkbox"]{width: 30px;height: 20px;}
-.warper1{background: chartreuse;height: 60px;display: flex;justify-content: space-between;align-items: center;}
+.warper1{border-top:1px solid #ddd; height: 60px;display: flex;justify-content: space-between;align-items: center;}
 .jiesun{width: 90px;height: 36px;}
 .con{display: flex;align-items: center;}
 .con h5{width: 67px;height: 18px;}

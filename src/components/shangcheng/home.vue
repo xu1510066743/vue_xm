@@ -18,7 +18,7 @@
             <!-- 主文结构 -->
             <div class="main-top">
                
-                <figure v-for='item in list'>
+                <figure v-for='(item,i) in list' :key="i">
                     <img :src=item.textimage  />
                      <router-link :to='"/detail/"+item.userid'>
                     <figcaption>{{item.username}}</figcaption>
@@ -95,34 +95,6 @@
 </template>
 <script>
 import axios from 'axios';
-import Mock  from 'mockjs';
-
-
-var Random=Mock.Random;
- Random.extend({
-    xijie: function(date) {
-        var constellations = ['家纺用品', '收纳整理', '卫浴个护', '餐厨用品', '生活数码', '居家装饰', '设计师', '家具', '户外出行', '饮食',]
-        return this.pick(constellations)
-    }
-    })
- Random.extend({
-    price: function(date) {
-        var constellations = ['￥149.00', '￥128.00', '￥229.00', '￥75.00',]
-        return this.pick(constellations)
-    }
-    })
-Mock.mock('http://www.baidu.com',{
-        'shangchen-g|10':[
-            {
-            "userid|+1":0,
-            "username":"@xijie",
-            "textimage":"@image('30x30')",
-            "price":"@price",
-            }
-        ]
-    })
-
-
 export default {
     name:'Home',
     data(){
@@ -133,18 +105,13 @@ export default {
     },
     mounted(){
         this.$emit('toparent',this.tit);
-        var _this=this;
+
         axios({
             method:'get',
-            url:'http://www.baidu.com',
-            dataType:"json",
+            url:'http://10.8.155.30:8081/house/goodsByDate.do',
         }).then(function(data){
-            //console.log(data.data.shangcheng);
-            _this.list=data.data.shangcheng
-
-
+            console.log(data.data)
         })
-
     },
     methods:{
         fanhui(){
@@ -219,7 +186,7 @@ section .main-center{height: 210px;}
 .main-center .zi-ti{height: 70px;text-align: center;line-height: 70px;} 
 .zi-ti h3{font-size: 14px;
 font-family: PingFangSC-regular;font-weight: normal}
-.main-center .zi-tu{height: 140px;display: flex;background: palegoldenrod;display: flex;justify-content:space-around;}
+.main-center .zi-tu{height: 140px;display: flex;display: flex;justify-content:space-around;}
 /* 7 8 19 */
 .zi-tu img{display:block;border: none}
 .zi-tu figure{height: 140px;}

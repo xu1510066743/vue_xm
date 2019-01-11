@@ -75,7 +75,7 @@
                 </figure>
                 <div>
 
-                    <router-link to='gouwuche'>
+                    <router-link to='/gouwuche'>
                     <mt-button type="primary">加入购物车</mt-button>
                     </router-link>
                     <mt-button type="danger">立即购买</mt-button>
@@ -105,32 +105,32 @@
 <script>
 import $ from 'jquery'
 import axios from 'axios';
-import Mock  from 'mockjs';
+// import Mock  from 'mockjs';
 
 
-var Random=Mock.Random;
- Random.extend({
-    xijie: function(date) {
-        var constellations = ['家纺用品', '收纳整理', '卫浴个护', '餐厨用品', '生活数码', '居家装饰', '设计师', '家具', '户外出行', '饮食',]
-        return this.pick(constellations)
-    }
-    })
- Random.extend({
-    price: function(date) {
-        var constellations = ['￥149.00', '￥128.00', '￥229.00', '￥75.00',]
-        return this.pick(constellations)
-    }
-    })
-Mock.mock('http://www.baidu.com',{
-        'shangcheng|10':[
-            {
-            "userid|+1":0,
-            "username":"@xijie",
-            "textimage":"@image('30x30')",
-            "price":"@price",
-            }
-        ]
-    })
+// var Random=Mock.Random;
+//  Random.extend({
+//     xijie: function(date) {
+//         var constellations = ['家纺用品', '收纳整理', '卫浴个护', '餐厨用品', '生活数码', '居家装饰', '设计师', '家具', '户外出行', '饮食',]
+//         return this.pick(constellations)
+//     }
+//     })
+//  Random.extend({
+//     price: function(date) {
+//         var constellations = ['￥149.00', '￥128.00', '￥229.00', '￥75.00',]
+//         return this.pick(constellations)
+//     }
+//     })
+// Mock.mock('http://www.baidu.com',{
+//         'shangcheng|1':[
+//             {
+//             "userid|+1":0,
+//             "username":"@xijie",
+//             "textimage":"@image('30x30')",
+//             "price":"@price",
+//             }
+//         ]
+//     })
 
 // $(function(){
 // });
@@ -154,14 +154,14 @@ export default {
   },
   mounted(){
       var _this=this;
-      axios({
-        method:'get',
-        url:'http://www.baidu.com',
-        dataType:"json",
-      }).then(function(data){
-        console.log(data.data.shangcheng)  
-        _this.detail=data.data.shangcheng
-      })
+    //   axios({
+    //     method:'get',
+    //     url:'http://www.baidu.com',
+    //     dataType:"json",
+    //   }).then(function(data){
+    //     //console.log(data.data.shangcheng)  
+    //     _this.detail=data.data.shangcheng
+    //   })
   }
 }
 </script>

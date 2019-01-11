@@ -103,7 +103,7 @@ $(function(){
 
 
 export default {
-    name:'Hezu',
+    name:'Hezu2',
     
 }
 </script>

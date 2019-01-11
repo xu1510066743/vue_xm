@@ -12,9 +12,11 @@ import My from '@/components/shangcheng/My'
 import Home from '@/components/shangcheng/Home'
 import Detail from '@/components/shangcheng/Detail'
 import Gouwuche from '@/components/shangcheng/Gouwuche'
+import Order from '@/components/shangcheng/Order'
+import Alipy from '@/components/shangcheng/Alipy'
 //租房子
 import Host from '@/components/fangdong/Host'
-import Hezu from '@/components/fangdong/Hezu'
+import Hezu2 from '@/components/fangdong/Hezu2'
 //我的
 
 import Set from '@/components/wo/Set'
@@ -24,6 +26,11 @@ import Adivce from '@/components/wo/Adivce'
 Vue.use(Router)
 //地图
 import Map from '@/components/map/Map'
+//登录
+import Login2 from '@/components/Login2'
+
+
+
 export default new Router({
   routes: [
     {
@@ -63,8 +70,8 @@ export default new Router({
         {path:'/host',
         component:Host,
         },
-        {path:'/hezu',
-        component:Hezu,
+        {path:'/hezu2',
+        component:Hezu2,
         },
 
       ]
@@ -102,7 +109,19 @@ export default new Router({
       path: '/map',
       component: Map
     },
-
+    {
+      path: '/login2',
+      component:Login2
+    },
+    {
+      path: '/order',
+      component:Order
+    },
+//支付
+    {
+      path: '/alipy',
+      component:Alipy
+    },
 
 
 

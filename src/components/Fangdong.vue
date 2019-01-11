@@ -5,7 +5,7 @@
         <header>
             <em class="iconfont icon-left" style="width:30px;color:#0076FF" @click="fanhui()">&nbsp;Back</em>
             <router-link to='/host' tag='span'><span>业主委托</span></router-link>
-            <router-link to='/hezu' tag='span'>
+            <router-link to='/hezu2' tag='span'>
             <span>整栋合作</span>
             </router-link>
         </header>
