@@ -53,7 +53,7 @@
             <div class="gnfc4">
                 
                 <ul >
-                    <li v-for='item in arr'>
+                    <li v-for='item in arr' :key='item'>
                         
                         <router-link :to='"/detail1/"+item.userid' tag='div'>
                             <img :src='item.img' alt="">
